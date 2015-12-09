@@ -10,6 +10,9 @@ en:
   new_account: "Create my account"
   new: "New"
   title: "Framgia E-Learning Systems"
+  account: "Account"
+  logout: "Log out"
+  users: "Users"
   about_content: "The Ruby on Rails Tutorial is a book and.
   screencast series to teach web development with Ruby on Rails.
   This is the sample application for the tutorial."
