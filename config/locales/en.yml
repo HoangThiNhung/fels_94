@@ -2,11 +2,12 @@ en:
   hello: "Hello world"
   contact: "Contact"
   home: "Home"
-  welcom: "Welcome To The Framgia E-Learning Systems"
+  welcome: "Welcome To The Framgia E-Learning Systems"
   about: "About"
   help: "Help"
   login: "Log in"
   signup: "Sign up"
+  new_account: "Create my account"
   new: "New"
   title: "Framgia E-Learning Systems"
   about_content: "The Ruby on Rails Tutorial is a book and.
