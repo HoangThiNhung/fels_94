@@ -1,7 +1,8 @@
 User.create!(name: "Hoang Thi Nhung",
              email: "hoang.thi.nhung@framgia.com",
              password: "123456",
-             password_confirmation: "123456")
+             password_confirmation: "123456",
+             admin: true)
 
 30.times do |n|
   name  = Faker::Name.name
