@@ -20,6 +20,11 @@ en:
   users: "Users"
   profile: "Profile"
   setting: "Settings"
+  edit_user: "Edit user"
+  update_profile: "Update your profile"
+  change: "Save change"
+  update_success: "Profile updated"
+  not_log_in: "Please Log in."
   about_content: "The Ruby on Rails Tutorial is a book and.
   screencast series to teach web development with Ruby on Rails.
   This is the sample application for the tutorial."
