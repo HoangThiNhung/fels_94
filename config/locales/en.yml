@@ -37,6 +37,18 @@ en:
   greeting: "Hi!"
   activate_mail_content: "Welcome to the Framgia E-Learning Systems! Click on the link below to activate your account:"
   activate: "Activate"
+  submit: "Submit"
+  update_password: "Update password"
+  not_empty: "can't be empty"
+  password_reseted: "Password has been reset."
+  password_expire: "Password reset has expired."
+  flash_email_sent_password: "Email sent with password reset instructions"
+  email_not_found: "Email address not found"
+  password_reset: "Password reset"
+  to_reset_bellow: "To reset your password click the link below:"
+  link_expire: "This link will expire in two hours."
+  not_request_password: "If you did not request your password to be reset,.
+  please ignore this email and your password will stay as it is."
   about_content: "The Ruby on Rails Tutorial is a book and.
   screencast series to teach web development with Ruby on Rails.
   This is the sample application for the tutorial."
