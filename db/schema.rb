@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209085641) do
+ActiveRecord::Schema.define(version: 20151211064610) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "target",     limit: 4
@@ -64,15 +64,17 @@ ActiveRecord::Schema.define(version: 20151209085641) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.string   "email",           limit: 255
-    t.string   "password_digest", limit: 255
-    t.boolean  "active"
+    t.string   "name",              limit: 255
+    t.string   "email",             limit: 255
+    t.string   "password_digest",   limit: 255
     t.boolean  "admin"
-    t.string   "image",           limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "remember_digest", limit: 255
+    t.string   "image",             limit: 255
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.string   "remember_digest",   limit: 255
+    t.string   "activation_digest", limit: 255
+    t.boolean  "activated",                     default: false
+    t.datetime "activated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
