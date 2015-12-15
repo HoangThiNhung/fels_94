@@ -17,3 +17,10 @@ User.create!(name: "Hoang Thi Nhung",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+users = User.all
+user  = users.first
+following = users[2..15]
+followers = users[3..10]
+following.each {|followed| user.follow(followed)}
+followers.each {|follower| follower.follow(user)}
