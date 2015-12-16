@@ -1,0 +1,17 @@
+<div id="category-<%= category.id %>" class="category">
+  <div class="row">
+    <div class="col-md-3">
+      <strong><span><%= link_to category.name, category %></span></strong>
+      | <%= category.words.count %> <%= t "words" %>
+    </div>
+    <div class="col-md-8">
+      <em><span class="content"><%= category.description %></span></em>
+    </div>
+    <div class="col-md-1">
+      <% if current_user.admin? %>
+        <i class="glyphicon glyphicon-trash"></i> <%= link_to t("delete"), admin_category_path(category.id), method: :delete,
+                                  data: {confirm: t("confirm")} %>
+      <% end %>
+    </div>
+  </div>
+</div>
