@@ -4,10 +4,17 @@
 </div>
 <div class="col-lg-9">
   <h1 class="shadow" ><%= t "category" %></h1>
+  <div class="add-new">
+    <div class="btn btn-success">
+      <i class="glyphicon glyphicon-plus"></i>
+      <%= link_to t("admin_add_new_category"), new_admin_category_path %>
+    </div>
+  </div>
+  <div class="clear"></div>
   <% if @categories.any? %>
     <div class="categories">
       <%= render @categories %>
     </div>
     <%= will_paginate %>
-  </div>
-<% end %>
+  <% end %>
+</div>
