@@ -1,8 +1,19 @@
-<li>
-  <%= gravatar_for user, size: 50 %>
-  <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-  | <%= link_to t("delete"), user, method: :delete,
+<tr>
+  <td>
+    <%= gravatar_for user, size: 50 %>
+    <%= link_to user.name, user %>
+  </td>
+  <td class="col-md-03">
+    <% if user.activated? %>
+      <%= t "active" %>
+    <% else %>
+      <%= t "unactive" %>
+    <% end %>
+  </td>
+  <td class="col-md-03">
+    <% if current_user.admin? && !current_user?(user) %>
+    <i class="glyphicon glyphicon-trash"></i> <%= link_to t("delete"), user, method: :delete,
                                   data: {confirm: t("confirm")} %>
-  <% end %>
-</li>
+    <% end %>
+  </td>
+</tr>

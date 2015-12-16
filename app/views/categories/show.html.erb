@@ -1,6 +1,6 @@
 <% provide :title, @category.name %>
-<h2> <%= @category.name %></h2>
-<p> <%= @category.description %></p>
+<h2 class="shadow"> <%= @category.name %></h2>
+<p class="description"><em><%= @category.description %></em></p>
 
 <% if @words.any? %>
   <ul class="words">
