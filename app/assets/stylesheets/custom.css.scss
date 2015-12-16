@@ -39,7 +39,7 @@ h1 {
   text-align: center;
 }
 h2 {
-  font-size: 1.2em;
+  font-size: 2.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -66,9 +66,16 @@ p {
 }
 footer {
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 10px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
+  .author {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.1em;
+    color: $gray-darker;
+    letter-spacing: -1px;
+  }
   a {
     color: $gray;
     &:hover {
@@ -259,5 +266,15 @@ span.picture {
   margin-top: 10px;
   input {
     border: 0;
+  }
+}
+
+.words {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
   }
 }

@@ -1,0 +1,10 @@
+<% provide :title, @category.name %>
+<h2> <%= @category.name %></h2>
+<p> <%= @category.description %></p>
+
+<% if @words.any? %>
+  <ul class="words">
+    <%= render @words %>
+  </ul>
+<% end %>
+<%= will_paginate @words %>

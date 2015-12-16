@@ -1,0 +1,8 @@
+<% provide :title, t("category") %>
+<h1><%= t "category" %></h1>
+<% if @categories.any? %>
+  <div class="categories">
+    <%= render @categories %>
+  </div>
+  <%= will_paginate %>
+<% end %>

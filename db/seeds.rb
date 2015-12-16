@@ -24,3 +24,18 @@ following = users[2..15]
 followers = users[3..10]
 following.each {|followed| user.follow(followed)}
 followers.each {|follower| follower.follow(user)}
+
+15.times do
+  name = Faker::Name.title
+  description = Faker::Lorem.paragraph
+  cate = Category.create! name: name, description: description
+
+  40.times do
+    word = cate.words.build content: Faker::Lorem.word
+    word.answers.build content: Faker::Lorem.word, correct: true
+    word.answers.build content: Faker::Lorem.word, correct: false
+    word.answers.build content: Faker::Lorem.word, correct: false
+    word.answers.build content: Faker::Lorem.word, correct: false
+    word.save!
+  end
+end
