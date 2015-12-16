@@ -69,5 +69,6 @@ en:
   Rails Tutorial help section. To get help on this sample app, see the.
   Ruby on Rails Tutorial book"
   home_content: "This is the home page for the Ruby on Rails Tutorial sample application."
+  admin_add_new_category: "Add New Category"
 
 
