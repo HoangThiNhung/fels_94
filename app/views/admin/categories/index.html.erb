@@ -1,0 +1,13 @@
+<% provide :title, t("category") %>
+<div class="col-lg-3">
+  <%= render "layouts/side_bar" %>
+</div>
+<div class="col-lg-9">
+  <h1 class="shadow" ><%= t "category" %></h1>
+  <% if @categories.any? %>
+    <div class="categories">
+      <%= render @categories %>
+    </div>
+    <%= will_paginate %>
+  </div>
+<% end %>

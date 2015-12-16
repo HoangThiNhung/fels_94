@@ -15,4 +15,9 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :relationships, only: [:create, :destroy]
   resources :categories, only: [:index, :show]
+
+  namespace :admin do
+    root "categories#index"
+    resources :categories, only: :destroy
+  end
 end

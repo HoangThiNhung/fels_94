@@ -292,3 +292,19 @@ span.picture {
   text-align: center;
   padding-bottom: 50px;
 }
+
+.lelf-side-bar{
+  background-color: #CAD1CC;
+  height: 700px;
+  margin-left: -100px;
+  margin-top: -10px;
+  .menus {
+    list-style: none;
+    margin: 0;
+    li {
+      overflow: auto;
+      padding: 10px 0;
+      border-bottom: 1px solid $gray-lighter;
+    }
+  }
+}
