@@ -68,13 +68,14 @@ p {
   background-color: #549 !important;
 }
 footer {
-  margin-top: 45px;
   padding-top: 10px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   .author {
-    float: left;
+    text-align: center;
+    float: none;
     margin-right: 10px;
+    margin-top: 30px;
     font-size: 1.1em;
     color: $gray-darker;
     letter-spacing: -1px;
@@ -86,7 +87,7 @@ footer {
     }
   }
   small {
-    float: left;
+    float: none;
   }
   ul {
     float: right;
@@ -295,7 +296,9 @@ span.picture {
 
 .lelf-side-bar{
   background-color: #CAD1CC;
-  height: 700px;
+  height: 620px;
+  width: 260px;
+  position: fixed;
   margin-left: -100px;
   margin-top: -10px;
   .menus {

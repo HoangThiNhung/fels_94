@@ -3,13 +3,13 @@
     <%= link_to t("title"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user.admin? %>
-          <li><%= link_to t("dashbroad"), admin_root_path %></li>
-        <% end %>
         <li><%= link_to t("home"), root_path %></li>
         <li><%= link_to t("about"), about_path %></li>
         <li><%= link_to t("help"), help_path %></li>
         <% if logged_in? %>
+          <% if current_user.admin? %>
+            <li><%= link_to t("dashbroad"), admin_root_path %></li>
+          <% end %>
           <li><%= link_to t("users"), users_path %></li>
           <li><%= link_to t("category"), categories_path %></li>
           <li class="dropdown">
