@@ -1,7 +1,7 @@
 <div id="category-<%= category.id %>" class="category">
   <div class="row">
     <div class="col-md-3">
-      <strong><span><%= link_to category.name, category %></span></strong>
+      <strong><span><%= link_to category.name, admin_category_path(category.id) %></span></strong>
       | <%= category.words.count %> <%= t "words" %>
     </div>
     <div class="col-md-8">
