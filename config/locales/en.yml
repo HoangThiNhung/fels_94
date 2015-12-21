@@ -70,5 +70,17 @@ en:
   Ruby on Rails Tutorial book"
   home_content: "This is the home page for the Ruby on Rails Tutorial sample application."
   admin_add_new_category: "Add New Category"
+  admin:
+    bottom:
+      save: "Save"
+    word:
+      answer: "answer"
+      words: "Words"
+      add_new: "Add new word"
+      words_all: "Words All"
+      message:
+        create_success: "create new word success!"
+        delete_success: "Deleted"
+      correct_answer: "Correct Answer"
 
 

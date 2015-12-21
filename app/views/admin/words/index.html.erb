@@ -1,0 +1,20 @@
+<% provide :title, t("admin.word.words") %>
+<div class="col-lg-3">
+  <%= render "layouts/side_bar" %>
+</div>
+<div class="col-lg-9">
+  <h2 class="shadow"> <%= t "admin.word.words_all" %></h2>
+  <div class="add-new">
+    <div class="btn btn-success">
+      <i class="glyphicon glyphicon-plus"></i>
+      <%= link_to t("admin.word.add_new"), new_admin_word_path %>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <% if @words.any? %>
+    <ul class="words">
+      <%= render @words %>
+    </ul>
+  <% end %>
+  <%= will_paginate @words %>
+</div>

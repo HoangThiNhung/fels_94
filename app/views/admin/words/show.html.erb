@@ -1,0 +1,12 @@
+<% provide :title, @word.content %>
+<div class="col-lg-3">
+  <%= render "layouts/side_bar" %>
+</div>
+<div class="col-lg-9">
+  <h2 class="shadow"> <%= @word.content %></h2>
+  <% if @answers.any? %>
+    <ul class="words">
+      <%= render @answers %>
+    </ul>
+  <% end %>
+</div>
