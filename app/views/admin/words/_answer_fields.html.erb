@@ -1,0 +1,15 @@
+<div class="answer">
+  <%= f.label :content, t("admin.word.answer") %>
+  <%= f.text_field :content %>
+  <%= f.label :correct, class: "checkbox inline" do %>
+    <%= f.check_box :correct, class: "checkbox_left" %>
+    <span><%= t "correct_answer" %></span>
+  <% end %>
+  <div class="remove-answer">
+    <div class="col-md-2">
+      <div class="btn btn-default">
+        <%= remove_answer raw("<span class='glyphicon glyphicon-remove remove_fields'></span>"), f %>
+      </div>
+    </div>
+  </div>
+</div>
