@@ -2,7 +2,12 @@
   <div id="word-<%= word.id%>">
     <div style="padding: 15px">
       <div class="content">
-        <%= word.content %>
+        <%= link_to word.content, admin_word_path(word.id) %>
+        <% if current_user.admin? %>
+          | <i class="glyphicon glyphicon-trash"></i>
+          <%= link_to t("delete"), admin_word_path(word.id), method: :delete,
+                                  data: {confirm: t("confirm")} %>
+        <% end %>
       </div>
     </div>
   </div>

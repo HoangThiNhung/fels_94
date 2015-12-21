@@ -322,3 +322,8 @@ span.picture {
 .clear {
   height: 30px;
 }
+
+input[type="checkbox"] {
+    position: absolute;
+    margin-left: -254px !important;
+}
