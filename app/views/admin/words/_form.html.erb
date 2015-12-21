@@ -7,16 +7,21 @@
       options_from_collection_for_select(@categories, :id, :name), class: "form-control"
     %>
   </div>
-  <%= f.fields_for :answers do |builder| %>
-    <p>
-      <%= builder.label :content, t("admin.word.answer") %>
-      <%= builder.text_field :content %>
-      <%= f.label :correct, class: "checkbox inline" do %>
-        <%= builder.check_box :correct, class: "checkbox_left" %>
-        <span><%= t "correct_answer" %></span>
-      <% end %>
-    </p>
- <% end %>
+  <div class="add_answ">
+    <div class="col-md-4">
+      <%= add_answer raw("<span class='glyphicon glyphicon-plus-sign'></span>"),
+        f, :answers %>
+    </div>
+  </div>
+  <div id ="answer_field">
+    <%= f.fields_for :answers do |builder| %>
+      <p>
+        <%= render "answer_fields", f: builder %>
+      </p>
+    <% end %>
+    <p class="new_answer"></p>
+  </div>
+
 
   <%= f.submit t("admin.bottom.save"), class: "btn btn-primary" %>
 <% end %>
