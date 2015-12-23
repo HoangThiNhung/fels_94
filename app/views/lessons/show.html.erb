@@ -1,0 +1,16 @@
+<h1 class="shadow"><%= t "lesson" %> #<%= @lesson.id %></h1>
+<p>
+  <%= t "category_name" %>:
+  <%= link_to @lesson.category.name, @lesson.category %>
+</p>
+<%= form_for @lesson do |f| %>
+  <ol>
+    <%= f.fields_for :results do |result| %>
+      <%= render "question", f: result %>
+    <% end %>
+  </ol>
+  <div class="col-sm-2">
+    <%= f.submit t("submit"), class: "btn btn-primary" %>
+  </div>
+  <br>
+<% end %>
