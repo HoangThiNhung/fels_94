@@ -91,5 +91,9 @@ en:
   score: "Score:"
   correct: "Correct"
   your_answer: "Your answer"
+  learned:
+    lesson: "lessons"
+    study: "study"
+    continue_learn: "Continue Learned"
 
 
