@@ -1,12 +1,12 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user, :admin_user
+  before_action :load_category, only: [:show, :edit, :update]
 
   def index
     @categories = Category.paginate page: params[:page], per_page: 5
   end
 
   def show
-    @category = Category.find params[:id]
     @words = @category.words.paginate page: params[:page], per_page: 100
   end
 
@@ -17,14 +17,26 @@ class Admin::CategoriesController < ApplicationController
   def create
     @category = Category.new category_params
     if @category.save
-      flash[:success] = "Category created!"
+      flash[:success] = t "admin.category.create_success"
       redirect_to admin_root_url
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @category.update_attributes category_params
+      flash[:success] = t "admin.category.update_success"
+      redirect_to admin_category_url
+    else
+      render "edit"
     end
   end
 
   def destroy
     Category.find(params[:id]).destroy
-    flash[:success] = "deleted"
+    flash[:success] = t "admin.category.delete_success"
     redirect_to admin_root_path
   end
 
@@ -32,5 +44,9 @@ class Admin::CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit :name, :description
+  end
+
+  def load_category
+    @category = Category.find params[:id]
   end
 end

@@ -4,6 +4,9 @@
 </div>
 <div class="col-lg-9">
   <h2 class="shadow"> <%= @category.name %></h2>
+  <div class="edit-category">
+    <%= link_to t("admin.edit"), edit_admin_category_path(@category.id), class: "btn btn-info" %>
+  </div>
   <p class="description"><em><%= @category.description %></em></p>
   <% if @words.any? %>
     <ul class="words">
