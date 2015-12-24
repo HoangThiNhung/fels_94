@@ -349,3 +349,26 @@ input[type="checkbox"] {
     padding-right: 0px;
   }
 }
+
+.start_learning {
+  .col-md-6 {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.answer {
+  padding-top: 20px;
+  .answer_content {
+    margin-top: -22px;
+    padding-left: 20px;
+  }
+  input {
+    width: 0% !important;
+    padding-left: 0px;
+  }
+}
+
+.fields {
+  padding-bottom: 50px;
+}

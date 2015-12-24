@@ -82,5 +82,14 @@ en:
         create_success: "create new word success!"
         delete_success: "Deleted"
       correct_answer: "Correct Answer"
+  lesson: "Lesson"
+  create_lesson_fails: "can not start lesson"
+  study_finish: "Study this lesson finish"
+  start_learning: "start learning"
+  category_name: "Category"
+  result: "Result"
+  score: "Score:"
+  correct: "Correct"
+  your_answer: "Your answer"
 
 

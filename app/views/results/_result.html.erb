@@ -1,0 +1,15 @@
+<tbody>
+  <tr>
+    <td>
+      <%= (result.answer.try(:correct?)||nil?).to_s %>
+    </td>
+    <td>
+      <%= result.word.content %>
+    </td>
+    <td>
+      <% unless result.answer.nil? %>
+        <%= result.answer.content %>
+      <% end %>
+    </td>
+  </tr>
+</tbody>

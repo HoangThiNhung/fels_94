@@ -3,6 +3,17 @@
     <div class="col-md-4">
       <strong><span><%= link_to category.name, category %></span></strong>
       | <%= category.words.count %> <%= t "words" %>
+      <br>
+      <% if logged_in? %>
+        <%= form_for @lesson, method: :post do |f| %>
+          <%= f.hidden_field :category_id, value: category.id %>
+          <div class="start_learning">
+            <div class="col-md-6">
+              <%= f.submit t("start_learning"), class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
     <div class="col-md-8">
       <em><span class="content"><%= category.description %></span></em>

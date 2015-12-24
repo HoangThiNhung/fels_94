@@ -1,0 +1,11 @@
+<li class="fields">
+  <strong> <%= f.object.word.content %> </strong> <br/>
+  <% f.object.word.answers.each do |answer| %>
+    <div class="answer">
+      <%= f.radio_button :answer_id, answer.id, class: "checkbox inline"%>
+      <div class="answer_content">
+        <%= answer.content %>
+      </div>
+    </div>
+  <% end %>
+</li>
