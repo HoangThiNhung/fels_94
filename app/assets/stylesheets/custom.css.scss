@@ -46,6 +46,15 @@ h2 {
   font-weight: normal;
   color: $gray-light;
 }
+h3 {
+  letter-spacing: -1px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+  span {
+    color: #385A87;
+  }
+}
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -371,4 +380,12 @@ input[type="checkbox"] {
 
 .fields {
   padding-bottom: 50px;
+}
+
+.continue_learn {
+  float: right;
+  padding-right: 200px;
+  a {
+    font-weight: bold;
+  }
 }

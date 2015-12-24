@@ -1,0 +1,21 @@
+<% provide :title, t("result") %>
+<h1 class="shadow"><%= t "result" %></h1>
+<div class="continue_learn">
+  <%= link_to t("learned.continue_learn"), categories_path, class: "btn btn-info" %>
+</div>
+<strong><%= t "score" %></strong>
+<%= @lesson.results.correct_answer.count %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th><%= t "correct" %></th>
+          <th><%= t "words" %></th>
+          <th><%= t "your_answer" %></th>
+        </tr>
+      </thead>
+      <%= render @lesson.results %>
+    </table>
+  </div>
+</div>

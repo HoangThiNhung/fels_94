@@ -27,6 +27,6 @@ class LessonsController < ApplicationController
 
   private
   def lesson_params
-    params.require(:lesson).permit :category_id, results_attributes: [:id, :answer_id]
+    params.require(:lesson).permit :category_id, :learned, results_attributes: [:id, :answer_id]
   end
 end
