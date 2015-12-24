@@ -19,6 +19,8 @@ class Admin::CategoriesController < ApplicationController
     if @category.save
       flash[:success] = t "admin.category.create_success"
       redirect_to admin_root_url
+    else
+      render "new"
     end
   end
 
