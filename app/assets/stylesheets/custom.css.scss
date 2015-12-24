@@ -334,7 +334,12 @@ span.picture {
 
 input[type="checkbox"] {
   position: absolute;
-  margin-left: -254px !important;
+  width: 10% !important;
+}
+
+.edit-category {
+  float: right;
+  margin-top: -60px;
 }
 
 .remove-answer {
@@ -359,6 +364,11 @@ input[type="checkbox"] {
   }
 }
 
+.edit-word {
+  float: right;
+  margin-top: -60px;
+}
+
 .start_learning {
   .col-md-6 {
     padding-left: 0;
@@ -372,7 +382,7 @@ input[type="checkbox"] {
     margin-top: -22px;
     padding-left: 20px;
   }
-  input {
+  input[type="radio"] {
     width: 0% !important;
     padding-left: 0px;
   }

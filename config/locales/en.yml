@@ -71,17 +71,25 @@ en:
   home_content: "This is the home page for the Ruby on Rails Tutorial sample application."
   admin_add_new_category: "Add New Category"
   admin:
+    edit: "Edit"
     bottom:
       save: "Save"
     word:
       answer: "answer"
       words: "Words"
       add_new: "Add new word"
+      update: "Update word"
       words_all: "Words All"
       message:
         create_success: "create new word success!"
         delete_success: "Deleted"
+        update_success: "Update word success!"
       correct_answer: "Correct Answer"
+    category:
+      update: "Update category"
+      update_success: "Update category success"
+      create_success: "Category created!"
+      delete_success: "Deleted category"
   lesson: "Lesson"
   create_lesson_fails: "can not start lesson"
   study_finish: "Study this lesson finish"
