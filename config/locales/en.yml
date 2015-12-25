@@ -103,5 +103,13 @@ en:
     lesson: "lessons"
     study: "study"
     continue_learn: "Continue Learned"
+  word:
+    list: "Words List"
+    filter: "Filter"
+  study:
+    start: "Study"
+  statistic: "Statistic"
+  new_feed: "New Feed"
+  panel: "Panel"
 
 
