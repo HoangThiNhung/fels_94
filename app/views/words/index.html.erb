@@ -1,0 +1,31 @@
+<% provide :title, t("word.list") %>
+<h2 class="shadow"> <%= t "word.list" %> </h2>
+<%= form_for words_path, method: :get do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= select_tag :category_id,
+                  options_from_collection_for_select(@categories, :id, :name,
+                  params[:category_id]), include_blank: t("word.all"),
+                  class: "form-control" %>
+    </div>
+    <% ["all_words", "learned", "not_learned"].each_with_index do |option, index| %>
+      <div class="col-md-2">
+        <div class="radio">
+          <%= radio_button_tag :option, option,
+          (checked = true if params[:option] == option || params[:option]
+            .nil? && index == 0) %>
+          <%= t "word.#{option}" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-md-2">
+      <%= f.submit t("word.filter"), class: "btn btn-info" %>
+    </div>
+  </div>
+<% end %>
+<% if @words.any? %>
+  <ul class="words">
+    <%= render @words %>
+  </ul>
+<% end %>
+<center> <%= will_paginate @words %> </center>

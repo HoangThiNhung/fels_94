@@ -9,9 +9,8 @@
         <% if logged_in? %>
           <% if current_user.admin? %>
             <li><%= link_to t("dashbroad"), admin_root_path %></li>
+            <li><%= link_to t("users"), users_path %></li>
           <% end %>
-          <li><%= link_to t("users"), users_path %></li>
-          <li><%= link_to t("category"), categories_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t "account" %> <b class="caret"></b>
