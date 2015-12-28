@@ -10,7 +10,11 @@ class Word < ActiveRecord::Base
                                allow_destroy: true
 
   scope :all_words, ->user{}
-  scope :learned, ->user{where(Settings.sql.word_learned, user.id)}
-  scope :not_learned, ->user{where(Settings.sql.not_learned, user.id)}
+  scope :learned, ->user{where "id IN (SELECT word_id FROM answers WHERE correct = 1 
+    AND id IN (SELECT answer_id FROM results WHERE lesson_id IN
+    (SELECT id FROM lessons WHERE user_id = #{user.id})))"}
+  scope :not_learned, ->user{where "id NOT IN (SELECT word_id FROM answers WHERE correct = 1 
+    AND id IN (SELECT answer_id FROM results WHERE lesson_id IN 
+    (SELECT id FROM lessons WHERE user_id = #{user.id})))"}
   scope :filter_category, ->category{where category: category if category.present?}
 end
