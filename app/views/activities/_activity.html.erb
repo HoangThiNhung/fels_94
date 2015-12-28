@@ -1,0 +1,30 @@
+<li>
+  <div class="content">
+    <%= link_to activity.user.name, activity.user %>
+    <em><%= t "activity.#{activity.action}" %></em>
+    <% case activity.action %>
+      <% when Settings.activity.follow, Settings.activity.unfollow %>
+        <%= link_to activity.action_name(User).name, activity.action_name(User) %>
+
+      <% when Settings.activity.learning %>
+        <%= link_to "#{t("lesson")} #{activity.action_name(Lesson).id}",
+          activity.action_name(Lesson) %>
+        <%= t "from" %> <%= link_to activity.action_name(Lesson).category.name,
+          activity.action_name(Lesson).category %>
+
+      <% when Settings.activity.learned %>
+        <strong>
+          "<%= activity.action_name(Lesson).results.correct_answer.count %>"
+        </strong>
+        <%= t "words" %> <%= t "in" %>
+        <%= link_to "#{t("lesson")} #{activity.action_name(Lesson).id}",
+          activity.action_name(Lesson) %>
+        <%= t "from" %> <%= link_to activity.action_name(Lesson).category.name,
+          activity.action_name(Lesson).category %>      
+    <% end %>
+  </div>
+  <div class="timestamp">
+    <%= time_ago_in_words activity.created_at %> <%= t "ago" %>.
+  </div>
+
+</li>

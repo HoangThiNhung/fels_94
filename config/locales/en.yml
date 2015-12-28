@@ -111,5 +111,9 @@ en:
   statistic: "Statistic"
   new_feed: "New Feed"
   panel: "Panel"
-
-
+  from: "from"
+  activity:
+    follow: "follow"
+    unfollow: "unfollow"
+    learning: "learning"
+    learned: "learned"

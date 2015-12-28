@@ -81,6 +81,10 @@ class User < ActiveRecord::Base
     following.include? other_user
   end
 
+  def load_activities
+    Activity.show_activity self.id
+  end
+
   private
 
   def downcase_email
