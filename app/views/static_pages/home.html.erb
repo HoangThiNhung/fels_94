@@ -29,6 +29,12 @@
   </aside>
   <aside class="col-md-9">
     <h1 class="shadow"><%= t "new-feed" %></h1>
+    <ol class="new_feed">
+      <% if @activities.any? %>
+        <%= render @activities %>
+        <center> <%= will_paginate @activities %> </center>
+      <% end %>
+    </ol>
   </aside>
 <% else %>
   <div class="center jumbotron">

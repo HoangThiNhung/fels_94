@@ -440,3 +440,20 @@ input[type="checkbox"] {
 #session_remember_me {
   margin-left: -20px;
 }
+
+.new_feed {
+  list-style: none;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+}
