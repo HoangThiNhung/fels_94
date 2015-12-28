@@ -16,7 +16,7 @@ class Lesson < ActiveRecord::Base
 
   private
   def add_question
-    words = category.words.order("RAND()").limit(10)
+    words = category.words.order("RANDOM()").limit(10)
     words.each{|word| results.build word: word}
   end
 
