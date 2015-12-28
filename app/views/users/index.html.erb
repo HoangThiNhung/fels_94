@@ -2,11 +2,6 @@
 <h1 class="shadow"><%= t "list_user" %></h1>
 <div class="table-responsive">
   <table class="table">
-    <tr>
-      <th style="padding-left: 20px"><%= t "name" %></th>
-      <th><%= t "status" %></th>
-      <th><%= t "action" %></th>
-    </tr>
     <%= render @users %>
   </table>
   <center><%= will_paginate %></center>
